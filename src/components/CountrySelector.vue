@@ -37,17 +37,17 @@ export default {
   },
   props: ["countries"],
   methods: {
-    onChange: function(e) {
-      //   console.log(e.target.value);
+    onChange(e) {
+      // console.log(e.target.value);
       this.$emit("country-change", e.target.value);
       this.isGlobal = e.target.value === "Global";
-      this.hasChangedSelectionOnce = true;
+      if (!this.hasChangedSelectionOnce) this.hasChangedSelectionOnce = true;
     },
-    selectGlobal: function() {
+    selectGlobal() {
       this.isGlobal = true;
       this.$emit("country-change", "Global");
     },
-    updateData: function() {
+    updateData() {
       this.$emit("refetch-data");
     },
   },

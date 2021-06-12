@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        rubik: ["Rubik", "monospace"],
+        rubik: ["Rubik", "sans-serif"],
       },
     },
     container: {

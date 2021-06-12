@@ -1,17 +1,18 @@
 <template>
   <Header />
   <div class="container">
-    <Home/>
+    <Home />
   </div>
 </template>
 
 <script lang="ts">
 import Header from "./components/Header.vue";
-import Home from "@/components/Home"
+import Home from "@/components/Home.vue";
 
 export default {
   components: {
     Header,
+    Home,
   },
 };
 </script>
