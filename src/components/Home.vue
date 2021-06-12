@@ -41,7 +41,6 @@ export default {
   },
   async created() {
     const data = await this.fetchCovidData();
-    console.log(data);
     this.stats = data.Global;
     this.global = data.Global;
     this.countries = data.Countries;
@@ -69,7 +68,6 @@ export default {
       this.loading = false;
     },
     updateData(country) {
-      console.log(country);
       if (country === "Global") {
         this.stats = this.global;
         this.title = country;

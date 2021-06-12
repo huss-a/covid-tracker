@@ -19,4 +19,9 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+::selection {
+  background: #991b1b;
+  color: white;
+}
 </style>
