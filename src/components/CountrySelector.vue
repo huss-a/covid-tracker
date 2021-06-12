@@ -21,7 +21,7 @@
       <button
         v-if="hasChangedSelectionOnce"
         class="bg-red-600 px-3 py-1 rounded-full text-white mx-2"
-        @click="updateData()"
+        @click="this.$emit('refetch-data')"
       >
         Update Data
       </button>
@@ -38,7 +38,6 @@ export default {
   props: ["countries"],
   methods: {
     onChange(e) {
-      // console.log(e.target.value);
       this.$emit("country-change", e.target.value);
       this.isGlobal = e.target.value === "Global";
       if (!this.hasChangedSelectionOnce) this.hasChangedSelectionOnce = true;
@@ -46,9 +45,6 @@ export default {
     selectGlobal() {
       this.isGlobal = true;
       this.$emit("country-change", "Global");
-    },
-    updateData() {
-      this.$emit("refetch-data");
     },
   },
 };
