@@ -63,6 +63,7 @@ export default {
       const data = await res.json();
       this.stats = data.Global;
       this.global = data.Global;
+      this.title = "Global";
       this.countries = data.Countries;
       this.dataDate = data.Date;
       this.loading = false;
