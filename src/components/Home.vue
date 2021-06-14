@@ -70,12 +70,11 @@ export default {
       this.loading = false;
     },
     updateData(country) {
+      this.title = country;
       if (country === "Global") {
         this.stats = this.global;
-        this.title = country;
       } else {
         this.stats = this.countries.find((c) => c.Country === country);
-        this.title = country;
       }
     },
   },
