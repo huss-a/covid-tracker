@@ -9,8 +9,8 @@
     />
     <About />
   </main>
-  <main class="flex justify-center items-center w-full" v-else>
-    <img class="w-48" :src="loadingImage" alt="Loading..." />
+  <main class="flex justify-center items-center w-full h-full" v-else>
+    <Spinner spinnerColor="red" />
   </main>
 </template>
 
@@ -19,6 +19,7 @@ import DataTitle from "@/components/DataTitle";
 import DataBoxes from "@/components/DataBoxes";
 import CountrySelector from "@/components/CountrySelector";
 import About from "@/components/About";
+import Spinner from "@/components/Spinner";
 
 export default {
   name: "Home",
@@ -27,6 +28,7 @@ export default {
     DataBoxes,
     CountrySelector,
     About,
+    Spinner,
   },
   data() {
     return {
@@ -36,7 +38,6 @@ export default {
       countries: [],
       title: "Global",
       dataDate: "",
-      loadingImage: require("@/assets/hourglass.gif"),
     };
   },
   async created() {
